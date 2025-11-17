@@ -1,0 +1,6 @@
+{
+  "Name": "Comercial",
+  "ProjectType": "Process",
+  "Description": "Criar o cadastro de um novo cliente do zero.",
+  "MainFile": "Main.xaml"
+}

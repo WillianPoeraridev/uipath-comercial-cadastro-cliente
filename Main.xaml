@@ -24,8 +24,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.Studio.Forms.Runtime</x:String>
       <x:String>System.Reflection</x:String>
@@ -44,6 +42,8 @@
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -106,11 +106,12 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1283,2373" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,3235" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="clienteDataNascimento" />
-      <Variable x:TypeArguments="x:String" Name="clienteCpf" />
-      <Variable x:TypeArguments="x:String" Name="clienteNome" />
+      <Variable x:TypeArguments="x:String" Default="Willian Poerari" Name="clienteDataNascimento" />
+      <Variable x:TypeArguments="x:String" Default="02690676044" Name="clienteCpf" />
+      <Variable x:TypeArguments="x:String" Default="17/06/1994" Name="clienteNome" />
+      <Variable x:TypeArguments="x:String" Name="clienteCep" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -128,6 +129,9 @@
         <InOutArgument x:TypeArguments="x:String" x:Key="data_nascimento">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">clienteDataNascimento</CSharpReference>
         </InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="cep">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">clienteCep</CSharpReference>
+        </InOutArgument>
       </ufa:ShowFormActivity.Arguments>
       <ufa:ShowFormActivity.TopMost>
         <InArgument x:TypeArguments="s:Nullable(x:Boolean)">
@@ -144,7 +148,10 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
-          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"Nome: " + clienteNome + " | CPF: " + clienteCpf</CSharpValue>
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18" xml:space="preserve">"Nome: " + clienteNome +
+" | CPF: " + clienteCpf +
+" | Data: " + clienteDataNascimento +
+" | CEP: " + clienteCep</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
       <sap:WorkflowViewStateService.ViewState>
@@ -154,18 +161,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome FENIX INTERNET" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,1954" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome FENIX INTERNET" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,2816" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="450,1760" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="450,2622" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,422" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Shortcuts="[d(hk)][k(F5)][u(hk)]" Version="V5" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cadastros'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="57697348-853f-4948-aa30-2a342a106040" ContentHash="YySjnQejb0-fMI5H0HlN9g" CvTextArea="31, 296, 61, 12" CvTextArgument="Cadastros" CvType="Text" DesignTimeRectangle="12, 286, 231, 33" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='submenu_title' tag='DIV' /&gt;" Guid="49536eac-cdf3-4ad6-8219-5be228f9b707" InformativeScreenshot="27d92a8cbcc719186fae07cc54e1fc1d.png" Reference="HMdmIAyWR0yl2bp0UrQW8Q/hehjG9UuxkyJ1bv7dIm0Jg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
@@ -265,7 +273,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="c2131eb6-42ad-4cee-bc83-9315c1c7841a" ContentHash="E1f08Oo-MkWxIyITNSk_7Q" CvElementArea="498, 732, 114, 33" CvType="InputBox" DesignTimeRectangle="501, 734, 110, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='data_nascimento' tag='INPUT' type='text' class='ixc-fields disab' aaname='Data de nascimento:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="c9722ddb-bbb3-4473-bb58-536de315d796" InformativeScreenshot="1f1e12190596ff84ce8108d647b21656.png" IsResponsive="True" Reference="HMdmIAyWR0yl2bp0UrQW8Q/klQATqLm9k2PYRkiY5_DIw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="c2131eb6-42ad-4cee-bc83-9315c1c7841a" CvTextArea="369, 743, 117, 12" CvTextArgument="Data de nascimento:" CvType="Text" DesignTimeRectangle="370, 741, 115, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Data de nascimento:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Data de nascimento:' /&gt;" Guid="4dc4ab0a-a63d-40b8-92c4-98d1ece6dea7" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -277,12 +285,44 @@
                 </InArgument>
               </uix:NTypeInto.Text>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Endereço'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Endereço'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="22dc63ce-a986-4aad-927e-18ef01bcdb94" ContentHash="X15BaPSBnEeKoNjXownk9g" CvElementArea="202, 259, 92, 40" CvTextArea="221, 273, 56, 15" CvTextArgument="Endereço" CvType="Button" DesignTimeRectangle="205, 261, 88, 36" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Endereço' class='tabTitle' parentname='cliente' tag='A' /&gt;" Guid="7246b016-7d04-40b5-91b6-6954f8c7bbae" InformativeScreenshot="c6eb9705c4fa4ecb3b8421391ebc889f.png" Reference="HMdmIAyWR0yl2bp0UrQW8Q/5U9Hgi6RE0WqrVFMwzkGsg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="22dc63ce-a986-4aad-927e-18ef01bcdb94" CvElementArea="295, 259, 84, 39" CvTextArea="313, 273, 48, 12" CvTextArgument="Contato" CvType="Button" DesignTimeRectangle="297, 261, 81, 36" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Contato' class='tabTitle' parentname='cliente' tag='A' type='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' check:innerText='Contato' /&gt;" Guid="28c6de43-0698-4ebc-80f4-87f4fad28aec" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CEP '" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="SameAsCard" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+              <uix:NTypeInto.ClipboardMode>
+                <InArgument x:TypeArguments="uix:NTypeByClipboardMode">
+                  <CSharpValue x:TypeArguments="uix:NTypeByClipboardMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">UiPath.UIAutomationNext.Enums.NTypeByClipboardMode.Never</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.ClipboardMode>
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="0716e4c8-b79f-4e12-ac76-30ba552a288b" ContentHash="qmFAHkgiZ0Ce0HblOcToug" CvElementArea="498, 507, 123, 32" CvType="InputBox" DesignTimeRectangle="501, 508, 120, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='cep' tag='INPUT' type='text' class='ixc-fields disab' aaname=' CEP: *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="168f4227-fc6a-4b42-a033-49bd031b7fb9" InformativeScreenshot="d17819d8f067b71308a5c0053234f43a.png" IsResponsive="True" Reference="HMdmIAyWR0yl2bp0UrQW8Q/qP_uJzMtxEuoRGu7xP1Vwg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="0716e4c8-b79f-4e12-ac76-30ba552a288b" CvTextArea="449, 517, 37, 12" CvTextArgument="CEP: *" CvType="Text" DesignTimeRectangle="448, 515, 37, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' parentid='1' tag='LABEL' class='' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='CEP: *' /&gt;" Guid="197a6a79-e06a-4b8a-8dc6-dd42bedfd82c" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">clienteCep</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Validar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="6b2a9d59-9f6a-4247-8c77-b4a28f7512ea" ContentHash="f5nAV1RPXUO6nwC8FvP3PQ" CvElementArea="618, 506, 69, 32" CvTextArea="631, 517, 43, 11" CvTextArgument="Validar" CvType="Button" DesignTimeRectangle="619, 508, 67, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='buscacep' tag='BUTTON' /&gt;" Guid="d2df61e3-efdd-4654-b4bf-2e3652ca1d46" InformativeScreenshot="8a59646d8abe9a7bf09a8ebdf6626237.png" Reference="HMdmIAyWR0yl2bp0UrQW8Q/xqdPkUDZwU246MwiCgj_4w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="6b2a9d59-9f6a-4247-8c77-b4a28f7512ea" CvTextArea="449, 517, 37, 12" CvTextArgument="CEP: *" CvType="Text" DesignTimeRectangle="448, 515, 37, 17" FuzzySelectorArgument="&lt;webctrl aaname=' CEP:' parentid='1' tag='SPAN' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='CEP: *' /&gt;" Guid="141fa1c9-7d37-4ce4-a355-8c4f80068b63" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>

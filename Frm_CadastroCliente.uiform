@@ -34,12 +34,19 @@
         "input": true
       },
       {
-        "type": "button",
+        "label": "CEP",
+        "tableView": true,
+        "key": "cep",
+        "type": "textfield",
+        "input": true
+      },
+      {
         "label": "Submit",
+        "tableView": false,
         "key": "submit",
-        "disableOnInvalid": true,
+        "type": "button",
         "input": true,
-        "tableView": false
+        "saveOnEnter": false
       }
     ]
   }

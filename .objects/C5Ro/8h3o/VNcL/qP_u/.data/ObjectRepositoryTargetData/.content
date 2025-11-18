@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="qmFAHkgiZ0Ce0HblOcToug" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="0716e4c8-b79f-4e12-ac76-30ba552a288b" CvElementArea="498, 507, 123, 32" CvType="InputBox" DesignTimeRectangle="501, 508, 120, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='cep' tag='INPUT' type='text' class='ixc-fields disab' aaname=' CEP: *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="168f4227-fc6a-4b42-a033-49bd031b7fb9" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0716e4c8-b79f-4e12-ac76-30ba552a288b" CvTextArea="449, 517, 37, 12" CvTextArgument="CEP: *" CvType="Text" DesignTimeRectangle="448, 515, 37, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' parentid='1' tag='LABEL' class='' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='CEP: *' /&gt;" Guid="197a6a79-e06a-4b8a-8dc6-dd42bedfd82c" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d17819d8f067b71308a5c0053234f43a.png" xmlns="">0B1Voys6sAkmRy5_BPNRiCw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

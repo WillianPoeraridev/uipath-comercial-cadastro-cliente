@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="f5nAV1RPXUO6nwC8FvP3PQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="6b2a9d59-9f6a-4247-8c77-b4a28f7512ea" CvElementArea="618, 506, 69, 32" CvTextArea="631, 517, 43, 11" CvTextArgument="Validar" CvType="Button" DesignTimeRectangle="619, 508, 67, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='buscacep' tag='BUTTON' /&gt;" Guid="d2df61e3-efdd-4654-b4bf-2e3652ca1d46" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="6b2a9d59-9f6a-4247-8c77-b4a28f7512ea" CvTextArea="449, 517, 37, 12" CvTextArgument="CEP: *" CvType="Text" DesignTimeRectangle="448, 515, 37, 17" FuzzySelectorArgument="&lt;webctrl aaname=' CEP:' parentid='1' tag='SPAN' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='CEP: *' /&gt;" Guid="141fa1c9-7d37-4ce4-a355-8c4f80068b63" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8a59646d8abe9a7bf09a8ebdf6626237.png" xmlns="">0E6AdJkW2Pk-A9WqJY8_8Bw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

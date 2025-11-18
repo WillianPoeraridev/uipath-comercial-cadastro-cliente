@@ -1,0 +1,39 @@
+﻿{
+  "Metadata": {
+    "Id": "b380ebbc-1f2b-4e13-b2fb-50af131c6da2",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "Frm_CadastroCliente",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "label": "Nome",
+        "tableView": true,
+        "key": "nome",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "CPF",
+        "tableView": true,
+        "key": "cpf",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}

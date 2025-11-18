@@ -108,9 +108,17 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,3235" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="Willian Poerari" Name="clienteDataNascimento" />
+      <Variable x:TypeArguments="x:String" Name="clienteDataNascimento">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">17/06/1994</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Default="02690676044" Name="clienteCpf" />
-      <Variable x:TypeArguments="x:String" Default="17/06/1994" Name="clienteNome" />
+      <Variable x:TypeArguments="x:String" Name="clienteNome">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Willian Poerari</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="clienteCep" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>

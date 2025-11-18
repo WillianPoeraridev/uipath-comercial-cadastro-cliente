@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -42,6 +42,8 @@
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -98,9 +100,13 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1283,1797" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1283,2373" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="clienteDataNascimento" />
       <Variable x:TypeArguments="x:String" Name="clienteCpf" />
@@ -111,13 +117,16 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ufa:ShowFormActivity Height="{x:Null}" InstanceName="{x:Null}" Left="{x:Null}" ShowInTaskbar="{x:Null}" ShowMargin="{x:Null}" Title="{x:Null}" Top="{x:Null}" Width="{x:Null}" WindowState="{x:Null}" DisplayName="Mostrar Formulário" FormId="b380ebbc-1f2b-4e13-b2fb-50af131c6da2" sap:VirtualizedContainerService.HintSize="522,221" sap2010:WorkflowViewState.IdRef="ShowFormActivity_1" IsAsync="False">
+    <ufa:ShowFormActivity Height="{x:Null}" InstanceName="{x:Null}" Left="{x:Null}" ShowInTaskbar="{x:Null}" ShowMargin="{x:Null}" Title="{x:Null}" Top="{x:Null}" Width="{x:Null}" WindowState="{x:Null}" DisplayName="Mostrar Formulário" FormId="b380ebbc-1f2b-4e13-b2fb-50af131c6da2" sap:VirtualizedContainerService.HintSize="452,221" sap2010:WorkflowViewState.IdRef="ShowFormActivity_1" IsAsync="False">
       <ufa:ShowFormActivity.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="nome">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">clienteNome</CSharpReference>
         </InOutArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="cpf">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">clienteCpf</CSharpReference>
+        </InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="data_nascimento">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">clienteDataNascimento</CSharpReference>
         </InOutArgument>
       </ufa:ShowFormActivity.Arguments>
       <ufa:ShowFormActivity.TopMost>
@@ -132,7 +141,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ufa:ShowFormActivity>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="522,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"Nome: " + clienteNome + " | CPF: " + clienteCpf</CSharpValue>
@@ -145,74 +154,52 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome FENIX INTERNET" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="522,1378" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome FENIX INTERNET" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,1954" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="520,1184" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="450,1760" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cadastros'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,194" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cadastros'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="57697348-853f-4948-aa30-2a342a106040" ContentHash="YySjnQejb0-fMI5H0HlN9g" CvTextArea="31, 296, 61, 12" CvTextArgument="Cadastros" CvType="Text" DesignTimeRectangle="12, 286, 231, 33" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='submenu_title' tag='DIV' /&gt;" Guid="49536eac-cdf3-4ad6-8219-5be228f9b707" InformativeScreenshot="27d92a8cbcc719186fae07cc54e1fc1d.png" Reference="HMdmIAyWR0yl2bp0UrQW8Q/hehjG9UuxkyJ1bv7dIm0Jg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="57697348-853f-4948-aa30-2a342a106040" CvTextArea="31, 296, 61, 12" CvTextArgument="Cadastros" CvType="Text" DesignTimeRectangle="24, 286, 76, 33" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Cadastros' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Cadastros' /&gt;" Guid="f2838126-79d8-42bf-a3b2-d63dc6f3ffa1" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Clientes'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,194" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Clientes'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="ec8fc7b6-acf7-4bee-b6fc-494438b85240" ContentHash="fuyd6Ri3D0qMYggbPbc8aw" CvTextArea="44, 329, 46, 12" CvTextArgument="Clientes" CvType="Text" DesignTimeRectangle="37, 319, 206, 33" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='menu_item_cliente' tag='A' /&gt;" Guid="f78d4bfa-2028-43fd-8a56-5c5c324df3c7" InformativeScreenshot="45321bf2dddd895c3a0d35f879286fb2.png" Reference="HMdmIAyWR0yl2bp0UrQW8Q/XSYmOZf0j0qF9AXnwfYMSA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="ec8fc7b6-acf7-4bee-b6fc-494438b85240" CvTextArea="44, 329, 46, 12" CvTextArgument="Clientes" CvType="Text" DesignTimeRectangle="44, 329, 46, 12" ElementType="Text" Guid="aa5bb629-ca12-487b-9b33-9277586920c7" SearchSteps="CV" TargetType="ComputerVisionBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Novo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,194" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Novo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="15fd5486-c639-4d49-bcce-6dac6fbaaf9f" ContentHash="BkChgwK1LEKAYyatsikyiw" CvElementArea="277, 203, 76, 34" CvTextArea="299, 213, 32, 12" CvTextArgument="Novo" CvType="Button" DesignTimeRectangle="279, 205, 72, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' /&gt;" Guid="a669cc85-d241-438b-9f6f-67b56f15d8ec" InformativeScreenshot="5095d8bd4c842b17238dfa70832c4e92.png" Reference="HMdmIAyWR0yl2bp0UrQW8Q/Da98Jacn_0qH5STfYW_zmQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="15fd5486-c639-4d49-bcce-6dac6fbaaf9f" CvElementArea="354, 203, 80, 34" CvTextArea="376, 213, 37, 12" CvTextArgument="Editar" CvType="Button" DesignTimeRectangle="356, 205, 77, 30" ElementType="Button" FuzzySelectorArgument="&lt;webctrl name='editar' tag='BUTTON' type='button' class='ixc-buttons fbutton' aaname='Alt+E' matching:name='fuzzy' fuzzylevel:name='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Editar' /&gt;" Guid="b8ed2879-1a34-4f40-83e1-c54886f0ad19" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,356" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tipo de cliente - fiscal'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="92dc4dab-fac5-480e-8e03-be231dcf6b51" ContentHash="mQXpufVbNkiRDww0FJeu7w" CvElementArea="500, 432, 321, 33" CvType="InputBox" DesignTimeRectangle="501, 434, 320, 30" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='tipo_cliente_scm' tag='SELECT' type='' class='ixc-fields disab' aaname=' Tipo de cliente - fiscal:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e9e7fab2-673b-4c88-9306-1d76c95138f3" InformativeScreenshot="6d375b56d1b89eecb3cb6f6f08584766.png" Reference="HMdmIAyWR0yl2bp0UrQW8Q/Sb67U8Kuw0GwSjjw_GxTUA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                            <uix:Target CVScreenId="92dc4dab-fac5-480e-8e03-be231dcf6b51" CvTextArea="350, 443, 136, 12" CvTextArgument="i Tipo de cliente - fiscal:" CvType="Text" DesignTimeRectangle="347, 441, 138, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='LABEL' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Tipo de cliente - fiscal:' /&gt;" Guid="c2a577f4-162e-46fe-8908-fad6d0ff6247" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <uix:NSelectItem DisplayName="Select Item 'Tipo de cliente - fiscal'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,186" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="03 - Residencial/Pessoa Física" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+            <uix:NSelectItem DisplayName="Select Item 'Tipo de cliente - fiscal'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="03 - Residencial/Pessoa Física" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="10">
                   <x:String>---</x:String>
@@ -237,9 +224,80 @@
                 </uix:TargetAnchorable>
               </uix:NSelectItem.Target>
             </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Razão social/nome: *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="08174807-0a69-43f2-a135-d65b5a230e2b" ContentHash="2YZgQHDK1kS4WvrEE6SraA" CvElementArea="499, 512, 332, 33" CvType="InputBox" DesignTimeRectangle="501, 514, 330, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='razao' tag='INPUT' type='text' class='ixc-fields disab' aaname=' Razão social/nome: *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="daf18b59-779f-407e-b241-d921e86b1fc1" InformativeScreenshot="48a4c450e6fca47313df851bee3851ed.png" IsResponsive="True" Reference="HMdmIAyWR0yl2bp0UrQW8Q/nCIvzPGrvkCblVsGyZkzmQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="08174807-0a69-43f2-a135-d65b5a230e2b" CvTextArea="355, 523, 131, 10" CvTextArgument="i Razão social/nome: *" CvType="Text" DesignTimeRectangle="353, 521, 132, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='LABEL' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Razão social/nome: *' /&gt;" Guid="6ef643a3-8ac1-44c8-bb43-be66413f20f1" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">clienteNome</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CNPJ/CPF: *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+              <uix:NTypeInto.ClipboardMode>
+                <InArgument x:TypeArguments="uix:NTypeByClipboardMode">
+                  <CSharpValue x:TypeArguments="uix:NTypeByClipboardMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">UiPath.UIAutomationNext.Enums.NTypeByClipboardMode.Always</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.ClipboardMode>
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="8431f8ed-128b-45a7-a432-0abcc2c8cb14" ContentHash="cP10oA4f-kC-h_ax-85FPw" CvElementArea="499, 592, 181, 32" CvType="InputBox" DesignTimeRectangle="501, 594, 180, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='cnpj_cpf' tag='INPUT' type='text' class='ixc-fields disab' aaname='CNPJ/CPF: *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="0187e1b9-ca53-4627-9264-4c553f673fe9" InformativeScreenshot="49e871b112be616515fa1b282ee79e1f.png" IsResponsive="True" Reference="HMdmIAyWR0yl2bp0UrQW8Q/XCeK3LF0EUGAuchBuBKwuQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="8431f8ed-128b-45a7-a432-0abcc2c8cb14" CvTextArea="419, 603, 67, 14" CvTextArgument="CNPJ/CPF: *" CvType="Text" DesignTimeRectangle="420, 601, 65, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='CNPJ/CPF:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='CNPJ/CPF: *' /&gt;" Guid="bd1a75f7-3ad9-4da5-a71c-206211422f93" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">clienteCpf</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Data de nascimento'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="SameAsCard" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="c2131eb6-42ad-4cee-bc83-9315c1c7841a" ContentHash="E1f08Oo-MkWxIyITNSk_7Q" CvElementArea="498, 732, 114, 33" CvType="InputBox" DesignTimeRectangle="501, 734, 110, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='data_nascimento' tag='INPUT' type='text' class='ixc-fields disab' aaname='Data de nascimento:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="c9722ddb-bbb3-4473-bb58-536de315d796" InformativeScreenshot="1f1e12190596ff84ce8108d647b21656.png" IsResponsive="True" Reference="HMdmIAyWR0yl2bp0UrQW8Q/klQATqLm9k2PYRkiY5_DIw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="c2131eb6-42ad-4cee-bc83-9315c1c7841a" CvTextArea="369, 743, 117, 12" CvTextArgument="Data de nascimento:" CvType="Text" DesignTimeRectangle="370, 741, 115, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Data de nascimento:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Data de nascimento:' /&gt;" Guid="4dc4ab0a-a63d-40b8-92c4-98d1ece6dea7" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">clienteDataNascimento</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Endereço'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="624ae861-90a3-4c31-baf2-e8774065c97e" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="22dc63ce-a986-4aad-927e-18ef01bcdb94" ContentHash="X15BaPSBnEeKoNjXownk9g" CvElementArea="202, 259, 92, 40" CvTextArea="221, 273, 56, 15" CvTextArgument="Endereço" CvType="Button" DesignTimeRectangle="205, 261, 88, 36" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Endereço' class='tabTitle' parentname='cliente' tag='A' /&gt;" Guid="7246b016-7d04-40b5-91b6-6954f8c7bbae" InformativeScreenshot="c6eb9705c4fa4ecb3b8421391ebc889f.png" Reference="HMdmIAyWR0yl2bp0UrQW8Q/5U9Hgi6RE0WqrVFMwzkGsg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="22dc63ce-a986-4aad-927e-18ef01bcdb94" CvElementArea="295, 259, 84, 39" CvTextArea="313, 273, 48, 12" CvTextArgument="Contato" CvType="Button" DesignTimeRectangle="297, 261, 81, 36" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Contato' class='tabTitle' parentname='cliente' tag='A' type='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' check:innerText='Contato' /&gt;" Guid="28c6de43-0698-4ebc-80f4-87f4fad28aec" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="-8, -1088, 1936, 1048" BrowserType="Chrome" ContentHash="APY-zUj9N0uN5amp_VRIQA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFySURBVDhPpVNLS0JREJ51/6I/0F9w0a9o16p9mzZFYZQgBSUVuGljmyhoERLVok1ERXZ9FGKi4Ss0HyldS70V05k598i5PoLwgzkz3zy+O+fCAfAYLnAbt7Bi4L+MZmhWkOLsXRmDORPhMI3RWhtDlRbCziM3Tl0WkTB2kkXYS2KhaTGfuX6lepEEOEGA9Qh6YzWOuWE3wXHm3UJ3uMqxjiWRcwp4I/zVevubebUlPRxncCv+xvHkxQtCIMkx1Z0C23JtuorC/H2FcwqwGZM9q8LWokMEjp7tDOJyRKyp92wIAU8YwSe872HwFRodubpp/bCHYBb9iTrHE+d5hP0Ux6WPr36BBUP+rLmQWF38dcJTvYOLdl4H95DATfkTzwpNhIM0phoW5k0LwR/nbdTg+GmO62q76auSvC4foxgdOv7ig2pdASa2Kd7re+tsKqGgN+iewANanq0baIVhXpmDi0O+FhuqQaFvwMnFYxrpORuuX76IALO2XY9+AAAAAElFTkSuQmCC" InformativeScreenshot="877c1f2828e4b198114e4ee33f995258.jpg" Reference="HMdmIAyWR0yl2bp0UrQW8Q/VNcL81RNxEKhFIUVgaL-lA" Selector="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" Url="https://sistema.fenixwireless.com.br/adm.php" Version="V2">
           <uix:TargetApp.Arguments>

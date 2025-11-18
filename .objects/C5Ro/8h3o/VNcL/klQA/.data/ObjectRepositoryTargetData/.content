@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="E1f08Oo-MkWxIyITNSk_7Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="c2131eb6-42ad-4cee-bc83-9315c1c7841a" CvElementArea="498, 732, 114, 33" CvType="InputBox" DesignTimeRectangle="501, 734, 110, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='data_nascimento' tag='INPUT' type='text' class='ixc-fields disab' aaname='Data de nascimento:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="c9722ddb-bbb3-4473-bb58-536de315d796" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c2131eb6-42ad-4cee-bc83-9315c1c7841a" CvTextArea="369, 743, 117, 12" CvTextArgument="Data de nascimento:" CvType="Text" DesignTimeRectangle="370, 741, 115, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Data de nascimento:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Data de nascimento:' /&gt;" Guid="4dc4ab0a-a63d-40b8-92c4-98d1ece6dea7" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1f1e12190596ff84ce8108d647b21656.png" xmlns="">038mW2m8q-ESiOAqrU8UriQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

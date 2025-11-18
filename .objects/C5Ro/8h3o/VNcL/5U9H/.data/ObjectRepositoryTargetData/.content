@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="X15BaPSBnEeKoNjXownk9g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="22dc63ce-a986-4aad-927e-18ef01bcdb94" CvElementArea="202, 259, 92, 40" CvTextArea="221, 273, 56, 15" CvTextArgument="Endereço" CvType="Button" DesignTimeRectangle="205, 261, 88, 36" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Endereço' class='tabTitle' parentname='cliente' tag='A' /&gt;" Guid="7246b016-7d04-40b5-91b6-6954f8c7bbae" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="22dc63ce-a986-4aad-927e-18ef01bcdb94" CvElementArea="295, 259, 84, 39" CvTextArea="313, 273, 48, 12" CvTextArgument="Contato" CvType="Button" DesignTimeRectangle="297, 261, 81, 36" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Contato' class='tabTitle' parentname='cliente' tag='A' type='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentname='fuzzy' fuzzylevel:parentname='0.0' check:innerText='Contato' /&gt;" Guid="28c6de43-0698-4ebc-80f4-87f4fad28aec" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="c6eb9705c4fa4ecb3b8421391ebc889f.png" xmlns="">0rn3XOIVs4Em6JUKzQGz0cA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

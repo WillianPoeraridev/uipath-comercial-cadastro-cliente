@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="cP10oA4f-kC-h_ax-85FPw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="8431f8ed-128b-45a7-a432-0abcc2c8cb14" CvElementArea="499, 592, 181, 32" CvType="InputBox" DesignTimeRectangle="501, 594, 180, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='cnpj_cpf' tag='INPUT' type='text' class='ixc-fields disab' aaname='CNPJ/CPF: *' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' /&gt;" Guid="0187e1b9-ca53-4627-9264-4c553f673fe9" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8431f8ed-128b-45a7-a432-0abcc2c8cb14" CvTextArea="419, 603, 67, 14" CvTextArgument="CNPJ/CPF: *" CvType="Text" DesignTimeRectangle="420, 601, 65, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='CNPJ/CPF:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='CNPJ/CPF: *' /&gt;" Guid="bd1a75f7-3ad9-4da5-a71c-206211422f93" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="49e871b112be616515fa1b282ee79e1f.png" xmlns="">00W7qmGkcnkS6sF6dQDdsQA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

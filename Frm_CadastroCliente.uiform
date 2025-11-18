@@ -27,6 +27,13 @@
         "input": true
       },
       {
+        "label": "Data de nascimento",
+        "tableView": true,
+        "key": "data_nascimento",
+        "type": "textfield",
+        "input": true
+      },
+      {
         "type": "button",
         "label": "Submit",
         "key": "submit",

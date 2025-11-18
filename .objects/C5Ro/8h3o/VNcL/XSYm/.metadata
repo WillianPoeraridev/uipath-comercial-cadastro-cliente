@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Clientes",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "XSYmOZf0j0qF9AXnwfYMSA",
+  "Reference": "HMdmIAyWR0yl2bp0UrQW8Q/XSYmOZf0j0qF9AXnwfYMSA",
+  "ParentRef": "HMdmIAyWR0yl2bp0UrQW8Q/VNcL81RNxEKhFIUVgaL-lA",
+  "Created": "2025-11-18T00:43:15.7844687Z",
+  "Updated": "2025-11-18T00:43:15.7844687Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BkChgwK1LEKAYyatsikyiw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="15fd5486-c639-4d49-bcce-6dac6fbaaf9f" CvElementArea="277, 203, 76, 34" CvTextArea="299, 213, 32, 12" CvTextArgument="Novo" CvType="Button" DesignTimeRectangle="279, 205, 72, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' /&gt;" Guid="a669cc85-d241-438b-9f6f-67b56f15d8ec" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="15fd5486-c639-4d49-bcce-6dac6fbaaf9f" CvElementArea="354, 203, 80, 34" CvTextArea="376, 213, 37, 12" CvTextArgument="Editar" CvType="Button" DesignTimeRectangle="356, 205, 77, 30" ElementType="Button" FuzzySelectorArgument="&lt;webctrl name='editar' tag='BUTTON' type='button' class='ixc-buttons fbutton' aaname='Alt+E' matching:name='fuzzy' fuzzylevel:name='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Editar' /&gt;" Guid="b8ed2879-1a34-4f40-83e1-c54886f0ad19" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="5095d8bd4c842b17238dfa70832c4e92.png" xmlns="">0yT5VAZ1azkGoOyF4o1yb1Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

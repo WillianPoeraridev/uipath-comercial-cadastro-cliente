@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="APY-zUj9N0uN5amp_VRIQA" Reference="HMdmIAyWR0yl2bp0UrQW8Q/VNcL81RNxEKhFIUVgaL-lA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, -1088, 1936, 1048" BrowserType="Chrome" ContentHash="Bb0U41CFxUmKKLNOGn2sIQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFySURBVDhPpVNLS0JREJ51/6I/0F9w0a9o16p9mzZFYZQgBSUVuGljmyhoERLVok1ERXZ9FGKi4Ss0HyldS70V05k598i5PoLwgzkz3zy+O+fCAfAYLnAbt7Bi4L+MZmhWkOLsXRmDORPhMI3RWhtDlRbCziM3Tl0WkTB2kkXYS2KhaTGfuX6lepEEOEGA9Qh6YzWOuWE3wXHm3UJ3uMqxjiWRcwp4I/zVevubebUlPRxncCv+xvHkxQtCIMkx1Z0C23JtuorC/H2FcwqwGZM9q8LWokMEjp7tDOJyRKyp92wIAU8YwSe872HwFRodubpp/bCHYBb9iTrHE+d5hP0Ux6WPr36BBUP+rLmQWF38dcJTvYOLdl4H95DATfkTzwpNhIM0phoW5k0LwR/nbdTg+GmO62q76auSvC4foxgdOv7ig2pdASa2Kd7re+tsKqGgN+iewANanq0baIVhXpmDi0O+FhuqQaFvwMnFYxrpORuuX76IALO2XY9+AAAAAElFTkSuQmCC" Reference="HMdmIAyWR0yl2bp0UrQW8Q/VNcL81RNxEKhFIUVgaL-lA" Selector="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" Url="https://sistema.fenixwireless.com.br/adm.php" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="877c1f2828e4b198114e4ee33f995258.jpg" xmlns="">0HtJ0ZeDqnEuivX_RXtYi4g</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

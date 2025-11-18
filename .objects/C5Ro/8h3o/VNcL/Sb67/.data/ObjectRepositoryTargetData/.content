@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mQXpufVbNkiRDww0FJeu7w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="sistema.fenixwireless.com.br/adm.php" CVScreenId="92dc4dab-fac5-480e-8e03-be231dcf6b51" CvElementArea="500, 432, 321, 33" CvType="InputBox" DesignTimeRectangle="501, 434, 320, 30" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='tipo_cliente_scm' tag='SELECT' type='' class='ixc-fields disab' aaname=' Tipo de cliente - fiscal:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e9e7fab2-673b-4c88-9306-1d76c95138f3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FENIX INTERNET' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="92dc4dab-fac5-480e-8e03-be231dcf6b51" CvTextArea="350, 443, 136, 12" CvTextArgument="i Tipo de cliente - fiscal:" CvType="Text" DesignTimeRectangle="347, 441, 138, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='LABEL' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Tipo de cliente - fiscal:' /&gt;" Guid="c2a577f4-162e-46fe-8908-fad6d0ff6247" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6d375b56d1b89eecb3cb6f6f08584766.png" xmlns="">0Bduw6ChxCUuUpYcMyWPXIA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome FENIX INTERNET",
+  "Type": "App",
+  "Id": "C5Ro-rYbIU6w8H0DPFfGKA",
+  "Reference": "HMdmIAyWR0yl2bp0UrQW8Q/C5Ro-rYbIU6w8H0DPFfGKA",
+  "Created": "2025-11-18T00:34:57.4685001Z",
+  "Updated": "2025-11-18T00:34:57.4685001Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
